@@ -68,11 +68,20 @@ output * bg ~/.config/sway/wallpaper/nausicaas_secret_garden.jpeg fill
     # Start a terminal with a large font-size
     bindsym $mod+Shift+Return exec "alacritty -o font.size=25"
 
+    # Start a terminal in the university-stuff directory
+    bindsym $mod+Shift+u exec "alacritty --working-directory \"Documents/university-stuff\""
+
     # Start a browser window
     bindsym $mod+n exec $browser
 
+    # Start chrome specifically
+    bindsym $mod+Shift+n exec google-chrome
+
     # Start Franz
     bindsym $mod+m exec "franz"
+
+    # Start Discord
+    bindsym $mod+d exec "discord"
 
     # Take a screenshot
     bindsym $mod+g exec grimshot copy area
@@ -81,7 +90,10 @@ output * bg ~/.config/sway/wallpaper/nausicaas_secret_garden.jpeg fill
     bindsym $mod+Shift+q kill
 
     # Start your launcher
-    bindsym $mod+d exec $menu
+    #bindsym $mod+d exec $menu
+
+    # Start wallpaper
+    bindsym $mod+p exec "mpv ~/.config/sway/fountain.mp4&xl"; kill; fullscreen
 
 
     # Brightness and volume
@@ -108,7 +120,7 @@ output * bg ~/.config/sway/wallpaper/nausicaas_secret_garden.jpeg fill
 
     # Hide mouse cursor after a period of inactivity.
     seat seat0 hide_cursor 200
-    
+
     client.focused "#2c2c2c" "#ffcccc" "#000000" "ff9999" "#2c2c2c"
 
     # Exit sway (logs you out of your Wayland session)
