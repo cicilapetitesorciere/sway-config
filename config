@@ -14,7 +14,7 @@ set $down j
 set $up k
 set $right l
 set $term alacritty
-set $browser qutebrowser 
+set $browser firefox-esr
 set $menu wofi --show run
 set $popsound mpg123 /home/cici/.config/sway/pop.mp3
 
@@ -23,7 +23,7 @@ include /etc/sway/config-vars.d/*
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/.config/sway/wallpaper/nausicaas_secret_garden.jpeg fill
+output * bg ~/.config/sway/wallpaper/s9u8ki2rr70a1.jpg fill
 #
 # Example configuration:
 #
@@ -81,7 +81,7 @@ output * bg ~/.config/sway/wallpaper/nausicaas_secret_garden.jpeg fill
     bindsym $mod+m exec "franz"
 
     # Start Discord
-    bindsym $mod+d exec "discord"
+    bindsym $mod+Shift+d exec "discord"
 
     # Take a screenshot
     bindsym $mod+g exec grimshot copy area
@@ -90,7 +90,7 @@ output * bg ~/.config/sway/wallpaper/nausicaas_secret_garden.jpeg fill
     bindsym $mod+Shift+q kill
 
     # Start your launcher
-    #bindsym $mod+d exec $menu
+    bindsym $mod+d exec $menu
 
     # Start wallpaper
     bindsym $mod+p exec "mpv ~/.config/sway/fountain.mp4&xl"; kill; fullscreen
@@ -121,10 +121,8 @@ output * bg ~/.config/sway/wallpaper/nausicaas_secret_garden.jpeg fill
     # Hide mouse cursor after a period of inactivity.
     seat seat0 hide_cursor 200
 
-    client.focused "#2c2c2c" "#ffcccc" "#000000" "ff9999" "#2c2c2c"
-
-    # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+    client.focused "#251e3e" "#851e3e" "#ffffff" "#00ff00"
+    client.unfocused "#251e3e" "#251e3e" "#ffffff" "#00ff00"
 #
 # Moving around:
 #
